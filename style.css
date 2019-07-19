@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calendar {
+    background: '#fff';
+    width: 40vw;
+    height: 54vh;
+    border-radius: 5px;
+    text-align:center;
+    border: 1px solid #333
+}
+
+#calendar .top {
+    display: grid;
+    background: #00FFE7;
+    grid-template-columns: 2fr 5fr 2fr;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 50px 0;
+    user-select: none;
+}
+
+#calendar .top div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calendar .top div:not(#currentDate) {
+    cursor: pointer;
+    transition: .28s;
+}
+
+#calendar .top div:not(#currentDate):hover {
+    color: red
+}
+
+#calendar #currentDate {
+    color: #333
+}
+
+#calendar div {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 50px;
+}
+
+#calendar span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    user-select: none;
+}
+
+#calendar div:not(.labels) span:hover {
+    background: cyan
+}
+
+#calendar div span:nth-child(6):not(.gray), #calendar div span:nth-child(7):not(.gray) {
+    color: #ED254E
+}
+
+#calendar .current {
+    background: greenyellow
+}
+
+#calendar .gray {
+    color: #BFB5AF;
+}
+
+#events {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 300px;
+    border-right: 1px solid #333;
+    text-align: center;
+    overflow-y: scroll
+}

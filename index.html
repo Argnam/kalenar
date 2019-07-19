@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Calendar</title>
+</head>
+
+<body>
+    <div id="events">
+        <h1>События</h1>
+        <div id="eventsList"></div>
+    </div>
+    <div id="calendar">
+        <div class="top">
+            <div onclick="previous()"><</div> 
+            <div id="currentDate"></div>
+            <div onclick="next()">></div>
+        </div>
+        <div class="labels">
+            <span>Пн</span>
+            <span>Вт</span>
+            <span>Ср</span>
+            <span>Чт</span>
+            <span>Пт</span>
+            <span>Сб</span>
+            <span>Вс</span>
+        </div>
+        <section id="calendarTable"></section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
